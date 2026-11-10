@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<script>window.IEL_API="https://script.google.com/macros/s/AKfycbwMAVK-JLAW8KTt_IQaKgbZN6vUI6mUT6Fu2EZWJsDHVOLy62I5e4c3yIzSe7bNHcQ2/exec";</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_top">
+<title>סקירת משפט כלכלי בינלאומי — ארכיון הצוות</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14243B;--navy2:#1D3354;--ink:#1B2633;--text:#33404F;--muted:#5A6878;--faint:#7A8796;
+  --line:#DCE2E9;--line2:#E8ECF1;--bg:#EEF1F5;--card:#FFFFFF;--soft:#F4F6F9;--focus:#2B6CB0;
+  --trade:#1F5A96;--investments:#1E6B52;--technologies:#5B3F8C;--esg:#8A4B12;
+  --trade-t:#E8EFF7;--investments-t:#E5F1EB;--technologies-t:#EFEAF6;--esg-t:#F6EDE3;
+  --key-bg:#FFF1CC;--key-fg:#7A4D00;--ok:#1E6B52;--warn:#9A3412;
+  --r:10px;--shadow:0 1px 2px rgba(20,36,59,.06),0 2px 8px rgba(20,36,59,.05);
+  --font:"Assistant","Segoe UI","Arial Hebrew",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--trade)}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit;font-size:16px;color:var(--ink)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.hidden{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* login */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;background:linear-gradient(180deg,var(--navy) 0,var(--navy) 42%,var(--bg) 42%)}
+.login-box{width:100%;max-width:420px;background:var(--card);border-radius:14px;box-shadow:0 10px 40px rgba(20,36,59,.18);padding:30px 28px}
+.login-kicker{font-size:13px;color:var(--muted)}
+.login h1{margin:4px 0 6px;font-size:26px;line-height:1.25;color:var(--navy)}
+.login p{margin:0 0 20px;color:var(--muted);font-size:15px}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.input{width:100%;border:1px solid #C9D1DB;border-radius:8px;padding:10px 12px;background:#fff}
+.input:focus{border-color:var(--focus);outline:none;box-shadow:0 0 0 3px rgba(43,108,176,.15)}
+.check{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--text);margin:4px 0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid transparent;border-radius:8px;padding:9px 16px;font-weight:600;background:var(--navy);color:#fff}
+.btn:hover{background:var(--navy2)}
+.btn[disabled]{opacity:.6;cursor:default}
+.btn.block{width:100%;padding:11px 16px;font-size:17px}
+.btn.ghost{background:#fff;color:var(--ink);border-color:#C9D1DB}
+.btn.ghost:hover{background:var(--soft)}
+.btn.small{padding:5px 11px;font-size:14px}
+.err{color:var(--warn);font-size:14px;min-height:20px;margin-top:10px}
+
+/* top bar */
+.top{background:var(--navy);color:#fff}
+.top-in{max-width:1240px;margin:0 auto;padding:14px 20px 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.brand{display:flex;flex-direction:column;cursor:pointer;min-width:0}
+.brand small{font-size:12px;color:#9FB3CC}
+.brand b{font-size:21px;line-height:1.2;white-space:nowrap}
+.search{flex:1 1 320px;position:relative;max-width:560px}
+.search input{width:100%;border:0;border-radius:999px;padding:10px 42px 10px 40px;background:#fff;color:var(--ink)}
+.search svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.search .clear{position:absolute;left:8px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--faint);padding:4px 8px;font-size:18px;line-height:1}
+.search kbd{position:absolute;left:12px;top:50%;transform:translateY(-50%);font:12px var(--font);color:var(--faint);border:1px solid var(--line);border-radius:4px;padding:0 5px}
+.me{display:flex;align-items:center;gap:8px;margin-inline-start:auto}
+.chip-btn{border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-size:14px;display:inline-flex;gap:6px;align-items:center}
+.chip-btn:hover{background:rgba(255,255,255,.1)}
+.tabs{max-width:1240px;margin:0 auto;padding:10px 20px 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tab{border:0;background:transparent;color:#C9D4E3;padding:9px 14px 11px;font-size:16px;font-weight:600;border-radius:8px 8px 0 0;white-space:nowrap;position:relative}
+.tab:hover{color:#fff}
+.tab.on{background:var(--bg);color:var(--navy)}
+.tab .count{display:inline-block;min-width:20px;padding:0 6px;margin-inline-start:6px;border-radius:999px;background:#E2574C;color:#fff;font-size:12px;line-height:20px;text-align:center}
+
+/* layout */
+.wrap{max-width:1240px;margin:0 auto;padding:20px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:24px;align-items:start}
+.wrap.single{grid-template-columns:minmax(0,1fr)}
+.side{position:sticky;top:12px;display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 24px);overflow:auto;padding-bottom:12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 12px}
+.panel h4{margin:0 0 8px;font-size:13px;color:var(--muted);font-weight:700;letter-spacing:.2px}
+.facet{display:flex;align-items:center;gap:8px;width:100%;border:0;background:none;padding:6px 6px;border-radius:7px;text-align:right;font-size:15px;color:var(--text)}
+.facet:hover{background:var(--soft)}
+.facet .dot{width:10px;height:10px;border-radius:3px;flex:none}
+.facet .n{margin-inline-start:auto;color:var(--faint);font-size:13px}
+.facet.on{background:var(--soft);font-weight:700;color:var(--ink)}
+.facet.off{opacity:.45}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font-size:14px}
+.seg button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.toggle{display:flex;align-items:center;gap:8px;padding:4px 2px;font-size:15px;cursor:pointer}
+.toggle input{width:16px;height:16px;accent-color:var(--navy)}
+.toggle .n{margin-inline-start:auto;color:var(--faint);font-size:13px}
+.linklist{display:flex;flex-direction:column}
+.linklist button{border:0;background:none;text-align:right;padding:5px 6px;border-radius:6px;font-size:14px;color:var(--text);display:flex;gap:6px}
+.linklist button:hover{background:var(--soft);color:var(--ink)}
+.linklist .n{margin-inline-start:auto;color:var(--faint);font-size:12px;flex:none}
+.filters-toggle{display:none}
+
+/* headings & bars */
+.view-head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 16px;margin:2px 0 14px}
+.view-head h2{margin:0;font-size:24px;line-height:1.25;color:var(--navy)}
+.view-head .sub{color:var(--muted);font-size:15px}
+.view-head .actions{margin-inline-start:auto;display:flex;gap:8px;flex-wrap:wrap}
+.active-filters{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 14px}
+.af{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 6px 3px 11px;font-size:14px}
+.af button{border:0;background:var(--soft);border-radius:50%;width:20px;height:20px;line-height:18px;padding:0;font-size:14px;color:var(--muted)}
+.af.clear{border-style:dashed;cursor:pointer;padding:3px 11px}
+.banner{background:#fff;border:1px solid var(--line);border-inline-start:4px solid var(--trade);border-radius:var(--r);padding:12px 16px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.banner b{color:var(--ink)}
+.ed-sep{position:sticky;top:0;z-index:2;background:var(--bg);padding:10px 0 8px;margin-top:6px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.ed-sep h3{margin:0;font-size:17px;color:var(--navy)}
+.ed-sep span{color:var(--faint);font-size:14px}
+.ed-sep button{margin-inline-start:auto;border:0;background:none;color:var(--trade);font-size:14px;font-weight:600}
+.empty{background:#fff;border:1px dashed #C9D1DB;border-radius:var(--r);padding:28px;text-align:center;color:var(--muted)}
+.more{display:block;margin:6px auto 30px}
+
+/* item card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 20px 12px;margin-bottom:14px;scroll-margin-top:60px;transition:box-shadow .2s}
+.card.focus{box-shadow:0 0 0 3px rgba(43,108,176,.35),var(--shadow)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:13px;color:var(--faint)}
+.area-chip{font-size:12px;font-weight:700;border-radius:5px;padding:1px 8px}
+.a-trade .area-chip,.area-chip.a-trade{background:var(--trade-t);color:var(--trade)}
+.a-investments .area-chip,.area-chip.a-investments{background:var(--investments-t);color:var(--investments)}
+.a-technologies .area-chip,.area-chip.a-technologies{background:var(--technologies-t);color:var(--technologies)}
+.a-esg .area-chip,.area-chip.a-esg{background:var(--esg-t);color:var(--esg)}
+.meta .tag{font-weight:700;color:var(--muted)}
+.badge{font-size:12px;border-radius:4px;padding:0 7px;line-height:20px}
+.badge.key{background:var(--key-bg);color:var(--key-fg);font-weight:700}
+.badge.worth{border:1px solid #AAB4C0;color:var(--muted)}
+.badge.catch{background:#E6ECF3;color:#3A4A5C}
+.badge.new{background:#E2574C;color:#fff;font-weight:700}
+.badge.corr{background:#FDE8E4;color:var(--warn);font-weight:700}
+.hl{margin:6px 0 2px;font-size:19px;line-height:1.4;font-weight:700}
+.hl a{text-decoration:none;color:inherit;cursor:pointer}
+.hl a:hover{text-decoration:underline}
+.a-trade .hl{color:var(--trade)} .a-investments .hl{color:var(--investments)} .a-technologies .hl{color:var(--technologies)} .a-esg .hl{color:var(--esg)}
+.note{font-size:14px;color:var(--muted)}
+.note a{cursor:pointer}
+.sum{margin:8px 0 10px;font-size:16px;line-height:1.65;color:var(--text)}
+.why{background:var(--soft);border-radius:7px;padding:8px 12px;font-size:15px;line-height:1.55}
+.why b{color:var(--navy)}
+.src{margin-top:10px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.src a{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:0}
+.a-trade .src a{color:var(--trade)} .a-investments .src a{color:var(--investments)} .a-technologies .src a{color:var(--technologies)} .a-esg .src a{color:var(--esg)}
+.src .k{font-size:11px;color:var(--faint);margin-inline-start:3px}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line2)}
+.topic-chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 11px;font-size:13px;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.topic-chip:hover{border-color:#AAB4C0;background:var(--soft)}
+.topic-chip b{color:var(--muted);font-weight:600}
+.foot .sp{flex:1}
+.act{border:0;background:none;border-radius:7px;padding:5px 8px;font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:5px}
+.act:hover{background:var(--soft);color:var(--ink)}
+.act.on{color:var(--ok);font-weight:700}
+.act svg{flex:none}
+mark{background:#FFE58A;color:inherit;border-radius:2px;padding:0 1px}
+
+/* comments */
+.comments{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+.cmt{display:flex;gap:10px;padding:6px 0}
+.avatar{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cmt .body{flex:1;min-width:0}
+.cmt .who{font-size:13px;color:var(--faint)}
+.cmt .who b{color:var(--ink);font-size:14px}
+.cmt .txt{white-space:pre-wrap;word-wrap:break-word;font-size:15px}
+.cmt .del{border:0;background:none;color:var(--faint);font-size:12px;padding:0 4px}
+.cmt-form{display:flex;gap:8px;align-items:flex-end;margin-top:6px}
+.cmt-form textarea{flex:1;min-height:42px;max-height:180px;resize:vertical;border:1px solid #C9D1DB;border-radius:8px;padding:8px 10px}
+.cmt-hint{font-size:12px;color:var(--faint);margin-top:4px}
+.status{display:inline-block;font-size:12px;font-weight:700;border-radius:4px;padding:0 7px;line-height:20px}
+.st-open{background:#FFF1CC;color:#7A4D00}.st-done{background:#E5F1EB;color:var(--ok)}.st-closed{background:#EEF1F5;color:var(--muted)}.st-follow{background:#E8EFF7;color:var(--trade)}
+
+/* editions list */
+.ed-row{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;margin-bottom:10px;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px}
+.ed-row:hover{border-color:#AAB4C0;box-shadow:var(--shadow)}
+.ed-row h3{margin:0;font-size:18px;color:var(--navy)}
+.ed-row .w{color:var(--faint);font-size:14px}
+.ed-row ul{grid-column:1/-1;margin:4px 0 0;padding:0 18px 0 0;font-size:15px;color:var(--text)}
+.ed-row li{margin:2px 0}
+.counts{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.cnt{font-size:13px;border-radius:5px;padding:1px 8px;font-weight:700}
+.ed-head{background:var(--navy);color:#fff;border-radius:var(--r) var(--r) 0 0;padding:18px 22px}
+.ed-head small{color:#9FB3CC}
+.ed-head h2{margin:4px 0 2px;font-size:24px;color:#fff}
+.ed-head .w{color:#C9D4E3;font-size:15px}
+.ed-bars{display:grid;grid-template-columns:repeat(4,1fr);background:#F6F8FB;border:1px solid var(--line);border-top:0}
+.ed-bars div{padding:9px 14px;border-top:4px solid;font-size:14px}
+.ed-body{background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);padding:18px 22px 6px;margin-bottom:18px}
+.glance{margin:0 0 6px;padding:0;list-style:none}
+.glance li{display:flex;gap:10px;margin-bottom:8px;font-size:16px;color:var(--ink)}
+.glance i{flex:none;width:9px;height:9px;border-radius:2px;margin-top:9px}
+.sec-title{font-size:22px;font-weight:700;padding-bottom:6px;border-bottom:2px solid;margin:22px 0 14px}
+.ho li{margin-bottom:8px}
+
+/* topics */
+.topic-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.topic-tools .input{max-width:320px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:6px;border-top:4px solid}
+.tcard:hover{box-shadow:var(--shadow);border-color:#AAB4C0}
+.tcard h3{margin:0;font-size:17px;line-height:1.35;color:var(--ink)}
+.tcard .m{font-size:13px;color:var(--faint)}
+.tcard .last{font-size:14px;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.area-group{margin:18px 0 10px;font-size:18px;font-weight:700}
+.timeline{position:relative;padding-inline-start:26px}
+.timeline:before{content:"";position:absolute;inset-inline-start:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative}
+.tl-item:before{content:"";position:absolute;inset-inline-start:-23px;top:20px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--muted)}
+.tl-date{font-size:14px;font-weight:700;color:var(--muted);margin:0 0 6px}
+.t-a-trade .tl-item:before{border-color:var(--trade)} .t-a-investments .tl-item:before{border-color:var(--investments)}
+.t-a-technologies .tl-item:before{border-color:var(--technologies)} .t-a-esg .tl-item:before{border-color:var(--esg)}
+
+/* requests */
+.req{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;margin-bottom:10px}
+.req .top-line{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px;color:var(--faint)}
+.req .ttl{font-size:16px;font-weight:700;color:var(--ink);margin:4px 0 2px}
+.req .ttl a{cursor:pointer;color:inherit}
+.req .txt{white-space:pre-wrap;font-size:15px}
+.req .handled{margin-top:8px;font-size:14px;background:var(--soft);border-radius:7px;padding:7px 10px}
+.req .handled a{cursor:pointer}
+.req .row-actions{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.section-h{font-size:18px;color:var(--navy);margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.section-h .n{font-size:13px;color:var(--faint);font-weight:400}
+.help{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;color:var(--muted);font-size:14px;margin-bottom:12px}
+
+/* modal & toast */
+.overlay{position:fixed;inset:0;background:rgba(20,36,59,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal{background:#fff;border-radius:12px;width:100%;max-width:520px;box-shadow:0 20px 60px rgba(0,0,0,.25);padding:20px 22px;max-height:90vh;overflow:auto}
+.modal h3{margin:0 0 4px;font-size:20px;color:var(--navy)}
+.modal .ctx{font-size:14px;color:var(--muted);margin-bottom:12px;border-inline-start:3px solid var(--line);padding-inline-start:10px}
+.modal textarea{width:100%;min-height:110px;border:1px solid #C9D1DB;border-radius:8px;padding:9px 11px;resize:vertical}
+.modal .row{display:flex;gap:8px;justify-content:flex-start;margin-top:14px;flex-wrap:wrap}
+.names{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.names button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;font-size:16px}
+.names button:hover{border-color:var(--navy)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:8px;padding:10px 18px;font-size:15px;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:60vh;color:var(--muted)}
+.spin{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--navy);border-radius:50%;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.footnote{max-width:1240px;margin:0 auto;padding:6px 20px 30px;color:var(--faint);font-size:13px}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:minmax(0,1fr);padding:14px 12px}
+  .side{position:static;max-height:none;display:none}
+  .side.open{display:flex}
+  .filters-toggle{display:inline-flex}
+  .brand b{font-size:18px}
+  .top-in{padding:12px 14px 0}
+  .tabs{padding:8px 10px 0}
+  .tab{padding:8px 11px 10px;font-size:15px}
+  .card{padding:14px 14px 10px}
+  .hl{font-size:18px}
+  .act .lbl{display:none}
+  .search kbd{display:none}
+  .ed-bars{grid-template-columns:repeat(2,1fr)}
+  .timeline{padding-inline-start:20px}
+  .ed-sep{flex-wrap:wrap;gap:2px 10px}
+  .ed-sep h3{font-size:16px;flex:1 1 100%}
+  .ed-sep span,.ed-sep button{white-space:nowrap}
+  .ed-sep button{margin-inline-start:auto;padding:0}
+  .view-head h2{font-size:22px}
+}
+/* guided tour */
+.help-btn{font-weight:700;min-width:32px;justify-content:center}
+.tour-hl{position:fixed;z-index:70;border-radius:10px;box-shadow:0 0 0 4px #FFD24D,0 0 0 9999px rgba(12,22,38,.55);pointer-events:none;transition:all .25s ease}
+.tour-catch{position:fixed;inset:0;z-index:69}
+.tour-bubble{position:fixed;z-index:71;width:min(360px,calc(100vw - 32px));background:#fff;color:var(--ink);border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.28);padding:16px 18px 14px;direction:rtl}
+.tour-bubble:before{content:"";position:absolute;width:14px;height:14px;background:#fff;transform:rotate(45deg);left:var(--ax,50%);margin-left:-7px}
+.tour-bubble.below:before{top:-7px}
+.tour-bubble.above:before{bottom:-7px}
+.tour-bubble.center:before{display:none}
+.tour-bubble h4{margin:0 0 6px;font-size:17px;color:var(--navy)}
+.tour-bubble p{margin:0;font-size:15px;line-height:1.6;color:var(--text)}
+.tour-row{display:flex;align-items:center;gap:8px;margin-top:14px}
+.tour-row .cnt{color:var(--faint);font-size:13px;margin-inline-end:auto}
+@media (prefers-reduced-motion:reduce){.tour-hl{transition:none}}
+
+@media print{
+  .top,.tabs,.side,.foot,.view-head .actions,.footnote,.ed-nav{display:none!important}
+  body{background:#fff}
+  .wrap{display:block;padding:0}
+  .card{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+(function(){
+'use strict';
+var AREAS = ['trade','investments','technologies','esg'];
+var AREA_NAME = {trade:'סחר',investments:'השקעות',technologies:'טכנולוגיות',esg:'ESG'};
+var AREA_COLOR = {trade:'#1F5A96',investments:'#1E6B52',technologies:'#5B3F8C',esg:'#8A4B12'};
+var AREA_TINT = {trade:'#E8EFF7',investments:'#E5F1EB',technologies:'#EFEAF6',esg:'#F6EDE3'};
+var MONTHS = ['ינואר','פברואר','מרץ','אפריל','מאי','יוני','יולי','אוגוסט','ספטמבר','אוקטובר','נובמבר','דצמבר'];
+var DAYS = ['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
+var TYPE_NAME = {comment:'הערה',follow:'בקשת מעקב',elaborate:'בקשת הרחבה',inaccuracy:'דיווח על אי-דיוק',request:'בקשה'};
+var PAGE = 30;
+
+var S = {
+  token:null, user:'', data:null, editions:[], items:[], byId:{}, threads:{}, edById:{},
+  feedback:[], fbById:{}, fbByItem:{}, fbByThread:{}, handled:{}, followed:{},
+  route:{p:'feed'}, q:'', f:{areas:{}, period:'all', key:false, updates:false, requests:false, comments:false, isnew:false, followed:false, tag:'', thread:''},
+  shown:PAGE, openComments:{}, prevVisit:null, tSort:'recent', tQ:'', tArea:'', tlOrder:'asc'
+};
+
+/* ---------------- storage (never fatal) */
+function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function lsDel(k){try{localStorage.removeItem(k)}catch(e){}}
+function ssGet(k){try{return sessionStorage.getItem(k)}catch(e){return null}}
+function ssSet(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
+function ssDel(k){try{sessionStorage.removeItem(k)}catch(e){}}
+
+/* ---------------- helpers */
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function safeUrl(u){u=String(u||'');return /^https?:\/\//i.test(u)?u:''}
+function $(sel,root){return (root||document).querySelector(sel)}
+function $all(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel))}
+function isoToday(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+function pad(n){return (n<10?'0':'')+n}
+function parseIso(s){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s||'');return m?new Date(+m[1],+m[2]-1,+m[3]):null}
+function heDate(iso,withDay){var d=parseIso(iso);if(!d)return iso||'';return (withDay?'יום '+DAYS[d.getDay()]+', ':'')+d.getDate()+' ב'+MONTHS[d.getMonth()]+' '+d.getFullYear()}
+function heShort(iso){var d=parseIso(iso);return d?d.getDate()+' ב'+MONTHS[d.getMonth()]:''}
+function daysAgoIso(n){var d=new Date();d.setDate(d.getDate()-n);return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+function relTime(iso){var t=Date.parse(iso);if(!t)return '';var m=Math.round((Date.now()-t)/60000);if(m<1)return 'עכשיו';if(m<60)return 'לפני '+m+' דק׳';var h=Math.round(m/60);if(h<24)return h===1?'לפני שעה':'לפני '+h+' שעות';var d=new Date(t);return d.getDate()+' ב'+MONTHS[d.getMonth()]+(d.getFullYear()!==new Date().getFullYear()?' '+d.getFullYear():'')}
+function norm(s){return String(s||'').toLowerCase().replace(/[֑-ׇ]/g,'').replace(/[״"׳'`’‘“”]/g,'').replace(/[־\-–—_\/.,:;()\[\]]/g,' ').replace(/\s+/g,' ').trim()}
+function terms(q){var out=[];String(q||'').replace(/"([^"]+)"|(\S+)/g,function(_,a,b){var t=norm(a||b);if(t)out.push(t)});return out}
+function reEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+function hl(text,ts){
+  text=String(text==null?'':text);
+  if(!ts||!ts.length)return esc(text);
+  var pats=ts.map(function(t){return t.split('').map(function(ch){return ch===' '?'[\\s\\-־–—_/.,:;]+':reEsc(ch)}).join('[״"׳\'`]?')});
+  var re;try{re=new RegExp('('+pats.join('|')+')','gi')}catch(e){return esc(text)}
+  var out='',last=0,m;
+  while((m=re.exec(text))){if(!m[0]){re.lastIndex++;continue}out+=esc(text.slice(last,m.index))+'<mark>'+esc(m[0])+'</mark>';last=m.index+m[0].length}
+  return out+esc(text.slice(last));
+}
+function initials(n){n=String(n||'?').trim();return esc(n.charAt(0)||'?')}
+var ICON={
+  search:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  cmt:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  eye:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+  plus:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',
+  warn:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>',
+  copy:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>',
+  link:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
+  lock:'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+  check:'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg>',
+  print:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M8 14h8v7H8z"/></svg>',
+  refresh:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
+  filter:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg>'
+};
+
+/* ---------------- server calls */
+function call(payload){
+  return new Promise(function(resolve,reject){
+    if(window.IEL_API&&!(window.google&&google.script&&google.script.run)){
+      fetch(window.IEL_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),redirect:'follow',credentials:'omit',cache:'no-store'})
+        .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.text()}).then(function(t){resolve(JSON.parse(t))}).catch(reject);
+      return;
+    }
+    if(!window.google||!google.script||!google.script.run){reject(new Error('no_backend'));return}
+    google.script.run.withSuccessHandler(function(s){try{resolve(JSON.parse(s))}catch(e){reject(e)}}).withFailureHandler(function(e){reject(e)}).api(JSON.stringify(payload));
+  });
+}
+function gunzipB64(b64){
+  var bin=atob(b64),u=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+  var stream=new Blob([u]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return new Response(stream).text();
+}
+function authed(payload){
+  payload.token=S.token;
+  return call(payload).then(function(r){
+    if(r&&r.error==='auth'){logout(true);throw new Error('auth')}
+    return r;
+  });
+}
+
+/* ---------------- toast & modal */
+var toastTimer;
+function toast(msg){var t=$('#toast');if(!t){t=document.createElement('div');t.id='toast';t.className='toast';t.setAttribute('role','status');document.body.appendChild(t)}t.textContent=msg;t.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.add('hidden')},3200)}
+function closeModal(){var o=$('.overlay');if(o)o.remove()}
+function modal(html,onReady){closeModal();var o=document.createElement('div');o.className='overlay';o.innerHTML='<div class="modal" role="dialog" aria-modal="true">'+html+'</div>';o.addEventListener('mousedown',function(e){if(e.target===o)closeModal()});document.body.appendChild(o);if(onReady)onReady(o);var f=o.querySelector('textarea,input,button.primary');if(f)f.focus()}
+
+/* ---------------- login */
+function renderLogin(msg){
+  document.getElementById('app').innerHTML=
+  '<div class="login"><form class="login-box" id="loginForm" autocomplete="on">'+
+  '<div class="login-kicker">המחלקה למשפט בינלאומי · צוות משפט כלכלי בינלאומי</div>'+
+  '<h1>ארכיון סקירת משפט כלכלי בינלאומי</h1>'+
+  '<p>כל הסקירות היומיות, חיפוש, מעקב אחרי נושאים, הערות ובקשות של הצוות.</p>'+
+  '<label class="field"><span>סיסמת הצוות</span><input class="input" type="password" id="pw" autocomplete="current-password" required></label>'+
+  '<label class="check"><input type="checkbox" id="remember" checked> לזכור אותי במחשב הזה (30 יום)</label>'+
+  '<button class="btn block" id="loginBtn" type="submit">כניסה</button>'+
+  '<div class="err" id="loginErr" role="alert">'+esc(msg||'')+'</div></form></div>';
+  $('#pw').focus();
+  $('#loginForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=$('#loginBtn');btn.disabled=true;btn.textContent='בודק…';$('#loginErr').textContent='';
+    call({action:'login',password:$('#pw').value}).then(function(r){
+      if(r.ok){S.token=r.token;if($('#remember').checked){lsSet('iel_token',r.token)}else{ssSet('iel_token',r.token)}start()}
+      else{btn.disabled=false;btn.textContent='כניסה';$('#loginErr').textContent=r.error==='locked'?'יותר מדי ניסיונות שגויים. אפשר לנסות שוב בעוד '+r.minutes+' דקות.':'הסיסמה שגויה. נסו שוב.';$('#pw').select()}
+    }).catch(function(){btn.disabled=false;btn.textContent='כניסה';$('#loginErr').textContent='אין חיבור לשרת. בדקו את החיבור לאינטרנט ונסו שוב.'});
+  });
+}
+function logout(expired){S.token=null;lsDel('iel_token');ssDel('iel_token');renderLogin(expired?'פג תוקף הכניסה. יש להזין שוב את הסיסמה.':'')}
+
+/* ---------------- loading data */
+function start(){
+  document.getElementById('app').innerHTML='<div class="loading"><div class="spin"></div><div>טוען את הארכיון…</div></div>';
+  load().then(function(){
+    S.prevVisit=lsGet('iel_last_visit');
+    lsSet('iel_last_visit',S.editions.length?S.editions[0].edition_id:'');
+    renderShell();
+    readLocation(function(r){go(r||{p:'feed'},true);if(!lsGet('iel_tour_done')&&!(r&&r.focus))setTimeout(startTour,700)});
+  }).catch(function(e){
+    if(e&&e.message==='auth')return;
+    document.getElementById('app').innerHTML='<div class="loading"><div>לא הצלחנו לטעון את הארכיון.</div><button class="btn" id="retry">לנסות שוב</button></div>';
+    $('#retry').onclick=start;
+  });
+}
+function load(){
+  var gz=typeof DecompressionStream!=='undefined';
+  return authed({action:'data',gzip:gz}).then(function(r){
+    if(!r.ok)throw new Error(r.error||'load');
+    if(r.gz)return gunzipB64(r.gz).then(function(t){return JSON.parse(t)});
+    return r.data;
+  }).then(prepare);
+}
+function prepare(data){
+  S.data=data;
+  S.editions=(data.editions||[]).slice().sort(function(a,b){return a.edition_id<b.edition_id?1:-1});
+  S.items=[];S.byId={};S.threads={};S.edById={};S.handled={};
+  S.editions.forEach(function(ed){
+    S.edById[ed.edition_id]=ed;
+    (ed.feedback_handled||[]).forEach(function(h){if(h&&h.id)(S.handled[h.id]=S.handled[h.id]||[]).push({edition:ed.edition_id,note:h.note||'',item_id:h.item_id||''})});
+    (ed.items||[]).forEach(function(it,idx){
+      it._ed=ed;it._idx=idx;it._date=it.event_date||ed.edition_date;
+      var slug=it.thread||('solo-'+it.id);it._slug=slug;
+      var t=S.threads[slug];
+      if(!t)t=S.threads[slug]={slug:slug,title:'',areas:{},items:[],keywords:[],_tEd:''};
+      t.items.push(it);t.areas[it.area]=(t.areas[it.area]||0)+1;
+      if(it.thread_title&&ed.edition_id>t._tEd){t.title=it.thread_title;t._tEd=ed.edition_id}
+      it._s=norm([it.headline,it.summary,it.why,it.tag,it.thread_title,it.date_text,(it.sources||[]).map(function(s){return s.label+' '+s.url}).join(' ')].join(' '));
+      S.items.push(it);S.byId[it.id]=it;
+    });
+  });
+  Object.keys(S.threads).forEach(function(k){
+    var t=S.threads[k];
+    t.items.sort(function(a,b){return a._ed.edition_id<b._ed.edition_id?-1:a._ed.edition_id>b._ed.edition_id?1:a._idx-b._idx});
+    t.area=Object.keys(t.areas).sort(function(a,b){return t.areas[b]-t.areas[a]})[0];
+    t.first=t.items[0]._ed.edition_date;t.last=t.items[t.items.length-1]._ed.edition_date;
+    if(!t.title)t.title=t.items[t.items.length-1].headline;
+    t._s=norm(t.title+' '+t.slug.replace(/-/g,' ')+' '+t.items.map(function(i){return i.headline+' '+i.tag}).join(' '));
+  });
+  indexFeedback(data.feedback||[]);
+}
+function indexFeedback(rows){
+  S.feedback=rows;S.fbById={};S.fbByItem={};S.fbByThread={};S.followed={};
+  rows.forEach(function(f){
+    S.fbById[f.id]=f;
+    if(f.item_id)(S.fbByItem[f.item_id]=S.fbByItem[f.item_id]||[]).push(f);
+    if(f.thread)(S.fbByThread[f.thread]=S.fbByThread[f.thread]||[]).push(f);
+    if(f.type==='follow'&&f.status==='open'&&f.thread)S.followed[f.thread]=f;
+  });
+}
+function commentsOf(id){return (S.fbByItem[id]||[]).filter(function(f){return f.type==='comment'})}
+function openRequests(){return S.feedback.filter(function(f){return f.type!=='comment'&&f.status==='open'&&(f.type==='follow'||!S.handled[f.id])})}
+
+/* ---------------- routing (google.script.history when available) */
+function routeToHash(r){var p=['p='+encodeURIComponent(r.p)];if(r.id)p.push('id='+encodeURIComponent(r.id));if(r.focus)p.push('focus='+encodeURIComponent(r.focus));return p.join('&')}
+function hashToRoute(h){
+  h=String(h||'').replace(/^#/,'');if(!h)return null;
+  var o={};h.split('&').forEach(function(kv){var i=kv.indexOf('=');if(i>0)o[decodeURIComponent(kv.slice(0,i))]=decodeURIComponent(kv.slice(i+1))});
+  if(o.item){var it=S.byId[o.item];return it?{p:'topic',id:it._slug,focus:it.id}:null}
+  if(!o.p)return null;return {p:o.p,id:o.id,focus:o.focus};
+}
+function hasGsHistory(){return window.google&&google.script&&google.script.history&&google.script.url}
+function readLocation(cb){
+  if(hasGsHistory()){google.script.url.getLocation(function(loc){cb(hashToRoute(loc.hash))});
+    google.script.history.setChangeHandler(function(e){var r=e.state&&e.state.p?e.state:hashToRoute(e.location&&e.location.hash);go(r||{p:'feed'},true)});}
+  else{cb(hashToRoute(location.hash));window.addEventListener('popstate',function(e){go((e.state&&e.state.p)?e.state:(hashToRoute(location.hash)||{p:'feed'}),true)})}
+}
+function pushLocation(r){
+  try{if(hasGsHistory())google.script.history.push(r,{},routeToHash(r));else history.pushState(r,'','#'+routeToHash(r))}catch(e){}
+}
+function go(r,noPush){
+  S.route=r;if(!noPush)pushLocation(r);
+  renderTabs();renderView();
+  if(r.focus){setTimeout(function(){var el=document.getElementById('it-'+r.focus);if(el){el.scrollIntoView({block:'start'});el.classList.add('focus');setTimeout(function(){el.classList.remove('focus')},2600)}},60)}
+  else window.scrollTo(0,0);
+}
+function itemLink(id){return (window.IEL_API?location.origin+location.pathname:(S.data.site_url||''))+'#item='+encodeURIComponent(id)}
+
+/* ---------------- shell */
+function renderShell(){
+  S.user=lsGet('iel_user')||'';
+  document.getElementById('app').innerHTML=
+  '<header class="top"><div class="top-in">'+
+   '<div class="brand" data-act="home" title="לדף הבית"><small>צוות משפט כלכלי בינלאומי · ארכיון הסקירות</small><b>סקירת משפט כלכלי בינלאומי</b></div>'+
+   '<div class="search" role="search">'+ICON.search+'<label class="sr" for="q">חיפוש בכל הסקירות</label><input id="q" type="search" placeholder="חיפוש בכל הסקירות: שם תיק, מדינה, גוף, מונח…" autocomplete="off"><kbd>/</kbd><button class="clear hidden" data-act="clearq" aria-label="ניקוי החיפוש">×</button></div>'+
+   '<div class="me"><button class="chip-btn" data-act="name" title="שינוי השם שמופיע ליד הערות">'+(S.user?esc(S.user):'מי אני?')+'</button>'+
+   '<button class="chip-btn help-btn" data-act="tour" title="הסבר על האתר ואיך משתמשים בו" aria-label="הסבר על האתר">? הסבר</button>'+
+   '<button class="chip-btn" data-act="refresh" title="רענון">'+ICON.refresh+'</button>'+
+   '<button class="chip-btn" data-act="logout" title="יציאה">יציאה</button></div>'+
+  '</div><nav class="tabs" id="tabs" aria-label="ניווט"></nav></header>'+
+  '<div id="main"></div>'+
+  '<div class="footnote">הארכיון מתעדכן אוטומטית אחרי כל סקירה. הערות, בקשות מעקב, בקשות הרחבה ודיווחים על אי-דיוק נשמרים לכל הצוות, ובקשות נקראות בהכנת הסקירה הבאה. לפני הסתמכות על פריט בעבודה פורמלית יש לבדוק את המקורות המקושרים.</div>';
+  var q=$('#q');q.value=S.q;
+  var t;q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){setQuery(q.value)},180)});
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){clearTimeout(t);setQuery(q.value)}if(e.key==='Escape'){q.value='';setQuery('')}});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/'&&!/input|textarea|select/i.test((document.activeElement||{}).tagName||'')){e.preventDefault();q.focus()}
+    if(e.key==='Escape')closeModal();
+  });
+  document.body.addEventListener('click',onClick);
+  document.body.addEventListener('change',onChange);
+}
+function setQuery(v){
+  S.q=v.trim();S.shown=PAGE;
+  var c=$('.search .clear');if(c)c.classList.toggle('hidden',!S.q);var k=$('.search kbd');if(k)k.classList.toggle('hidden',!!S.q);
+  if(S.route.p!=='feed')go({p:'feed'});else renderView();
+}
+function renderTabs(){
+  var n=openRequests().length;
+  var tabs=[['feed','כל העדכונים'],['editions','מהדורות'],['topics','נושאים'],['requests','מעקב ובקשות']];
+  var cur={feed:'feed',editions:'editions',edition:'editions',topics:'topics',topic:'topics',requests:'requests'}[S.route.p];
+  $('#tabs').innerHTML=tabs.map(function(t){return '<button class="tab'+(cur===t[0]?' on':'')+'" data-act="tab" data-id="'+t[0]+'">'+t[1]+(t[0]==='requests'&&n?'<span class="count" title="בקשות פתוחות">'+n+'</span>':'')+'</button>'}).join('');
+}
+function renderView(){
+  var p=S.route.p,m=$('#main');
+  if(p==='edition')m.innerHTML=viewEdition(S.route.id);
+  else if(p==='editions')m.innerHTML=viewEditions();
+  else if(p==='topics')m.innerHTML=viewTopics();
+  else if(p==='topic')m.innerHTML=viewTopic(S.route.id);
+  else if(p==='requests')m.innerHTML=viewRequests();
+  else m.innerHTML=viewFeed();
+}
+
+/* ---------------- item card */
+function findOriginal(it){
+  var u=it.update_of||it.correction_of;if(!u)return null;
+  if(u.item_id&&S.byId[u.item_id])return S.byId[u.item_id];
+  var ed=null;S.editions.forEach(function(e){if(!ed&&e.edition_date===u.edition_date)ed=e});
+  if(!ed)return null;
+  var same=(ed.items||[]).filter(function(x){return x._slug===it._slug});
+  return same[0]||null;
+}
+function card(it,o){
+  o=o||{};var ts=o.ts||[];var ed=it._ed;var t=S.threads[it._slug];
+  var isNew=S.prevVisit&&ed.edition_id>S.prevVisit;
+  var badges='';
+  if(it.priority==='key')badges+='<span class="badge key">מרכזי</span>';
+  if(it.priority==='worth')badges+='<span class="badge worth">שווה עיון</span>';
+  if(it.catchup)badges+='<span class="badge catch" title="פריט מהשבוע האחרון שלא נכלל בסקירות קודמות">השלמה</span>';
+  if(it.correction_of)badges+='<span class="badge corr">תיקון</span>';
+  if(isNew&&!o.noNew)badges+='<span class="badge new">חדש</span>';
+  var note='';
+  var orig=findOriginal(it);
+  if(it.update_of){note='דווח לראשונה בסקירה מיום '+esc(it.update_of.text||heDate(it.update_of.edition_date))+(orig?' — <a data-act="item" data-id="'+esc(orig.id)+'">לפריט המקורי</a>':'')}
+  else if(it.request){var rq=it.request.feedback_id&&S.fbById[it.request.feedback_id];note='בעקבות בקשה מיום '+esc(it.request.text||heDate(it.request.date))+(rq?' של '+esc(rq.author):'')}
+  else if(it.correction_of){note='תיקון לפריט שפורסם בסקירה מיום '+esc(it.correction_of.text||heDate(it.correction_of.edition_date))+(orig?' — <a data-act="item" data-id="'+esc(orig.id)+'">לפריט המקורי</a>':'')}
+  var src=(it.sources||[]).map(function(s){var u=safeUrl(s.url);var k=s.kind==='paywalled'?'<span class="k" title="למנויים">'+ICON.lock+'</span>':(s.kind==='official'||s.kind==='primary')?'<span class="k" title="מקור רשמי / ראשוני">'+ICON.check+'</span>':'';return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+hl(s.label,ts)+'</a>'+k:esc(s.label)}).join('<span aria-hidden="true">·</span>');
+  var cm=commentsOf(it.id).length;var fol=S.followed[it._slug];
+  var n=t?t.items.length:1;
+  var open=S.openComments[it.id];
+  return '<article class="card a-'+esc(it.area)+'" id="it-'+esc(it.id)+'">'+
+   '<div class="meta"><span class="area-chip">'+AREA_NAME[it.area]+'</span><span class="tag">'+hl(it.tag,ts)+'</span><span>· '+esc(it.date_text||heDate(it._date))+'</span>'+badges+'</div>'+
+   '<h3 class="hl"><a data-act="item" data-id="'+esc(it.id)+'">'+hl(it.headline,ts)+'</a></h3>'+
+   (note?'<div class="note">'+note+'</div>':'')+
+   '<p class="sum">'+hl(it.summary,ts)+'</p>'+
+   '<div class="why"><b>רלוונטיות עבורנו:</b> '+hl(it.why,ts)+'</div>'+
+   '<div class="src">'+((it.sources||[]).length>1?'מקורות:':'מקור:')+' '+src+'</div>'+
+   '<div class="foot">'+
+    (o.inTopic?'':'<button class="topic-chip" data-act="topic" data-id="'+esc(it._slug)+'" title="כל ההתפתחויות בנושא">'+(n>1?'<b>נושא ('+n+'):</b> ':'<b>נושא:</b> ')+hl(t?t.title:'',ts)+'</button>')+
+    (o.inEdition?'':'<button class="topic-chip" data-act="edition" data-id="'+esc(ed.edition_id)+'" title="למהדורה המלאה">מהדורת '+esc(heShort(ed.edition_date))+'</button>')+
+    '<span class="sp"></span>'+
+    '<button class="act'+(cm?' on':'')+'" data-act="comments" data-id="'+esc(it.id)+'" aria-expanded="'+(open?'true':'false')+'">'+ICON.cmt+'<span class="lbl">הערות</span>'+(cm?' ('+cm+')':'')+'</button>'+
+    '<button class="act'+(fol?' on':'')+'" data-act="follow" data-id="'+esc(it.id)+'" title="'+(fol?'הנושא במעקב':'לבקש להמשיך לעקוב אחרי הנושא')+'">'+ICON.eye+'<span class="lbl">'+(fol?'במעקב':'המשך מעקב')+'</span></button>'+
+    '<button class="act" data-act="elaborate" data-id="'+esc(it.id)+'" title="לבקש הרחבה בסקירה הבאה">'+ICON.plus+'<span class="lbl">בקשת הרחבה</span></button>'+
+    '<button class="act" data-act="inaccuracy" data-id="'+esc(it.id)+'" title="לדווח שמשהו בפריט אינו מדויק">'+ICON.warn+'<span class="lbl">אי-דיוק</span></button>'+
+    '<button class="act" data-act="copy" data-id="'+esc(it.id)+'" title="העתקת הפריט עם המקורות">'+ICON.copy+'<span class="lbl">העתקה</span></button>'+
+    '<button class="act" data-act="link" data-id="'+esc(it.id)+'" title="העתקת קישור לפריט">'+ICON.link+'</button>'+
+   '</div>'+
+   (open?commentsBlock(it.id):'')+
+  '</article>';
+}
+function commentsBlock(itemId){
+  var list=commentsOf(itemId).slice().sort(function(a,b){return a.created_at<b.created_at?-1:1});
+  var others=(S.fbByItem[itemId]||[]).filter(function(f){return f.type!=='comment'});
+  return '<div class="comments" id="cm-'+esc(itemId)+'">'+
+   list.map(cmtHTML).join('')+
+   others.map(function(f){return '<div class="cmt"><div class="avatar" style="background:#5A6878">'+initials(f.author)+'</div><div class="body"><div class="who"><b>'+esc(f.author)+'</b> · '+esc(TYPE_NAME[f.type])+' · '+esc(relTime(f.created_at))+' '+statusChip(f)+'</div>'+(f.text?'<div class="txt">'+esc(f.text)+'</div>':'')+'</div></div>'}).join('')+
+   (list.length||others.length?'':'<div class="cmt-hint">אין עדיין הערות על הפריט.</div>')+
+   '<div class="cmt-form"><textarea id="ta-'+esc(itemId)+'" placeholder="הוספת הערה לצוות…" aria-label="הערה"></textarea><button class="btn small" data-act="sendcmt" data-id="'+esc(itemId)+'">שליחה</button></div>'+
+   '<div class="cmt-hint">ההערה גלויה לכל הצוות. לבקשה שהסקירה הבאה תטפל בה, השתמשו בכפתורים "בקשת הרחבה" או "אי-דיוק".</div></div>';
+}
+function cmtHTML(f){
+  var mine=S.user&&f.author===S.user;
+  return '<div class="cmt"><div class="avatar">'+initials(f.author)+'</div><div class="body"><div class="who"><b>'+esc(f.author)+'</b> · '+esc(relTime(f.created_at))+(mine?' <button class="del" data-act="delcmt" data-id="'+esc(f.id)+'">מחיקה</button>':'')+'</div><div class="txt">'+esc(f.text)+'</div></div></div>';
+}
+function statusChip(f){
+  if(f.status==='closed')return '<span class="status st-closed">'+(f.type==='follow'?'המעקב הופסק':'נסגר')+'</span>';
+  if(f.type==='follow')return '<span class="status st-follow">במעקב</span>';
+  if(S.handled[f.id])return '<span class="status st-done">טופל</span>';
+  return '<span class="status st-open">ממתין לסקירה הבאה</span>';
+}
+
+/* ---------------- feed */
+function feedFilter(skip){
+  var f=S.f,ts=terms(S.q),areaOn=Object.keys(f.areas).filter(function(a){return f.areas[a]});
+  var since=f.period==='all'?'':daysAgoIso(+f.period);
+  return S.items.filter(function(it){
+    if(skip!=='area'&&areaOn.length&&!f.areas[it.area])return false;
+    if(since&&it._ed.edition_date<since)return false;
+    if(f.key&&it.priority!=='key')return false;
+    if(f.updates&&!it.update_of)return false;
+    if(f.requests&&!(it.request||it.correction_of))return false;
+    if(f.comments&&!commentsOf(it.id).length)return false;
+    if(f.isnew&&!(S.prevVisit&&it._ed.edition_id>S.prevVisit))return false;
+    if(f.followed&&!S.followed[it._slug])return false;
+    if(f.tag&&it.tag!==f.tag)return false;
+    if(ts.length){var hay=it._s+' '+norm(commentsOf(it.id).map(function(c){return c.text}).join(' '));for(var i=0;i<ts.length;i++)if(hay.indexOf(ts[i])<0)return false}
+    return true;
+  });
+}
+function viewFeed(){
+  var f=S.f,ts=terms(S.q);
+  var list=feedFilter();
+  var order={key:0,normal:1,worth:2};
+  list.sort(function(a,b){if(a._ed.edition_id!==b._ed.edition_id)return a._ed.edition_id<b._ed.edition_id?1:-1;var x=AREAS.indexOf(a.area)-AREAS.indexOf(b.area);if(x)return x;return (order[a.priority]||1)-(order[b.priority]||1)||a._idx-b._idx});
+  var base=feedFilter('area');var ac={};base.forEach(function(it){ac[it.area]=(ac[it.area]||0)+1});
+  var newCount=S.prevVisit?S.items.filter(function(it){return it._ed.edition_id>S.prevVisit}).length:0;
+  // side panel
+  var anyArea=AREAS.some(function(a){return f.areas[a]});
+  var side='<aside class="side" id="side">'+
+   '<div class="panel"><h4>תחומים</h4>'+AREAS.map(function(a){return '<button class="facet'+(f.areas[a]?' on':(anyArea?' off':''))+'" data-act="area" data-id="'+a+'" aria-pressed="'+(!!f.areas[a])+'"><span class="dot" style="background:'+AREA_COLOR[a]+'"></span>'+AREA_NAME[a]+'<span class="n">'+(ac[a]||0)+'</span></button>'}).join('')+'</div>'+
+   '<div class="panel"><h4>תקופה</h4><div class="seg">'+[['7','שבוע'],['30','חודש'],['90','3 חודשים'],['all','הכל']].map(function(p){return '<button class="'+(f.period===p[0]?'on':'')+'" data-act="period" data-id="'+p[0]+'">'+p[1]+'</button>'}).join('')+'</div></div>'+
+   '<div class="panel"><h4>הצגה</h4>'+
+    tog('key','רק פריטים מרכזיים')+tog('updates','רק עדכונים להתפתחויות קודמות')+tog('requests','הרחבות ותיקונים בעקבות בקשות')+tog('comments','פריטים עם הערות של הצוות')+tog('followed','נושאים שבמעקב')+(newCount?tog('isnew','חדש מאז הביקור הקודם',newCount):'')+
+   '</div>'+
+   sideTopics(list,ts)+sideTags(list)+
+  '</aside>';
+  // active filters
+  var chips=[];
+  if(S.q)chips.push(['q','חיפוש: '+S.q]);
+  AREAS.forEach(function(a){if(f.areas[a])chips.push(['area:'+a,AREA_NAME[a]])});
+  if(f.period!=='all')chips.push(['period',{7:'השבוע האחרון',30:'החודש האחרון',90:'3 החודשים האחרונים'}[f.period]]);
+  [['key','מרכזיים'],['updates','עדכונים'],['requests','הרחבות ותיקונים'],['comments','עם הערות'],['followed','במעקב'],['isnew','חדש']].forEach(function(x){if(f[x[0]])chips.push([x[0],x[1]])});
+  if(f.tag)chips.push(['tag','תגית: '+f.tag]);
+  var chipsHTML=chips.length?'<div class="active-filters">'+chips.map(function(c){return '<span class="af">'+esc(c[1])+'<button data-act="unfilter" data-id="'+esc(c[0])+'" aria-label="הסרת הסינון">×</button></span>'}).join('')+(chips.length>1?'<span class="af clear" data-act="unfilter" data-id="all">ניקוי הכל</span>':'')+'</div>':'';
+  var head='<div class="view-head"><div><h2>'+(S.q?'תוצאות חיפוש':'כל העדכונים')+'</h2><div class="sub">'+list.length+' פריטים'+(S.q?'':' ב-'+S.editions.length+' מהדורות')+'</div></div><div class="actions"><button class="btn ghost small filters-toggle" data-act="filters">'+ICON.filter+' סינון</button></div></div>';
+  var banner='';
+  if(newCount&&!f.isnew&&!S.q&&!chips.length)banner='<div class="banner"><span>מאז הביקור הקודם נוספו <b>'+newCount+' פריטים</b>.</span><button class="btn small ghost" data-act="shownew">להציג רק אותם</button></div>';
+  var body='';
+  if(!list.length)body='<div class="empty">'+(S.q?'לא נמצאו פריטים שמתאימים לחיפוש. אפשר לנסות מילה אחרת, שם באנגלית, או להסיר סינונים.':'אין פריטים שמתאימים לסינון.')+'</div>';
+  else{
+    var cur='';var shown=list.slice(0,S.shown);
+    shown.forEach(function(it){
+      if(it._ed.edition_id!==cur){cur=it._ed.edition_id;var cnt=list.filter(function(x){return x._ed===it._ed}).length;
+        body+='<div class="ed-sep"><h3>'+esc(it._ed.title||heDate(it._ed.edition_date,true))+(it._ed.note&&/-[a-z]$/.test(cur)?' · '+esc(it._ed.note.split(':')[0]):'')+'</h3><span>'+cnt+' פריטים</span><button data-act="edition" data-id="'+esc(cur)+'">למהדורה המלאה ←</button></div>'}
+      body+=card(it,{ts:ts,inEdition:true});
+    });
+    if(list.length>S.shown)body+='<button class="btn ghost more" data-act="more">להציג עוד ('+(list.length-S.shown)+')</button>';
+  }
+  return '<div class="wrap">'+side+'<section>'+head+chipsHTML+banner+body+'</section></div>';
+}
+function tog(k,label,n){return '<label class="toggle"><input type="checkbox" data-act="flag" data-id="'+k+'"'+(S.f[k]?' checked':'')+'> '+label+(n?'<span class="n">'+n+'</span>':'')+'</label>'}
+function sideTopics(list){
+  var c={};list.forEach(function(it){c[it._slug]=(c[it._slug]||0)+1});
+  var top=Object.keys(c).filter(function(k){return S.threads[k]&&S.threads[k].items.length>1}).sort(function(a,b){return c[b]-c[a]||(S.threads[a].last<S.threads[b].last?1:-1)}).slice(0,10);
+  if(!top.length)return '';
+  return '<div class="panel"><h4>נושאים בולטים בתוצאות</h4><div class="linklist">'+top.map(function(k){return '<button data-act="topic" data-id="'+esc(k)+'"><span>'+esc(S.threads[k].title)+'</span><span class="n">'+c[k]+'</span></button>'}).join('')+'</div></div>';
+}
+function sideTags(list){
+  var c={};list.forEach(function(it){if(it.tag)c[it.tag]=(c[it.tag]||0)+1});
+  var top=Object.keys(c).sort(function(a,b){return c[b]-c[a]}).slice(0,12);
+  if(top.length<2)return '';
+  return '<div class="panel"><h4>תגיות</h4><div class="linklist">'+top.map(function(k){return '<button data-act="tag" data-id="'+esc(k)+'"><span>'+esc(k)+'</span><span class="n">'+c[k]+'</span></button>'}).join('')+'</div></div>';
+}
+
+/* ---------------- editions */
+function viewEditions(){
+  return '<div class="wrap single"><section><div class="view-head"><div><h2>מהדורות</h2><div class="sub">'+S.editions.length+' מהדורות, מהחדשה לישנה</div></div></div>'+
+  S.editions.map(function(ed){
+    var c={};(ed.items||[]).forEach(function(i){c[i.area]=(c[i.area]||0)+1});
+    return '<div class="ed-row" data-act="edition" data-id="'+esc(ed.edition_id)+'" role="link" tabindex="0"><div><h3>'+esc(ed.title||heDate(ed.edition_date,true))+'</h3><div class="w">מכסה את '+esc(ed.window||'')+(ed.note?' · '+esc(ed.note):'')+'</div></div>'+
+     '<div class="counts">'+AREAS.map(function(a){return c[a]?'<span class="cnt" style="background:'+AREA_TINT[a]+';color:'+AREA_COLOR[a]+'">'+AREA_NAME[a]+' '+c[a]+'</span>':''}).join('')+'</div>'+
+     '<ul>'+(ed.glance||[]).slice(0,3).map(function(g){return '<li>'+esc(g.text)+'</li>'}).join('')+'</ul></div>';
+  }).join('')+'</section></div>';
+}
+function viewEdition(id){
+  var ed=S.edById[id];if(!ed)return '<div class="wrap single"><div class="empty">המהדורה לא נמצאה.</div></div>';
+  var i=S.editions.indexOf(ed);var newer=S.editions[i-1],older=S.editions[i+1];
+  var c={};(ed.items||[]).forEach(function(x){c[x.area]=(c[x.area]||0)+1});
+  var secs=AREAS.map(function(a){
+    var its=(ed.items||[]).filter(function(x){return x.area===a}).sort(function(x,y){var o={key:0,normal:1,worth:2};return o[x.priority]-o[y.priority]||x._idx-y._idx});
+    return '<div class="sec-title" style="color:'+AREA_COLOR[a]+';border-color:'+AREA_COLOR[a]+'">'+AREA_NAME[a]+'</div>'+(its.length?its.map(function(x){return card(x,{inEdition:true,noNew:true})}).join(''):'<p style="color:var(--faint);font-style:italic">אין התפתחויות משמעותיות בתקופה זו.</p>');
+  }).join('');
+  var ho=(ed.headlines_only||[]);
+  var hoHTML=ho.length?'<div class="sec-title" style="color:#5A6878;border-color:#5A6878;font-size:19px">כותרות לעיון</div><p style="color:var(--muted);font-size:14px">כתבות במקורות החסומים למנויים, שתוכנן לא אומת. מוצגת הכותרת בלבד.</p><ul class="ho">'+ho.map(function(h){var u=safeUrl(h.url);return '<li><b style="color:'+(AREA_COLOR[h.area]||'#5A6878')+'">'+esc(AREA_NAME[h.area]||'')+'</b> · '+esc(h.date_text||'')+' · '+esc(h.text)+' — '+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(h.label||'קישור')+'</a>':'')+'</li>'}).join('')+'</ul>':'';
+  var fh=(ed.feedback_handled||[]);
+  var fhHTML=fh.length?'<div class="sec-title" style="color:#5A6878;border-color:#5A6878;font-size:19px">בקשות הצוות שטופלו במהדורה זו</div><ul>'+fh.map(function(h){var f=S.fbById[h.id];return '<li>'+(f?esc(TYPE_NAME[f.type]||'בקשה')+' של '+esc(f.author)+': ':'')+esc(h.note||'')+(h.item_id&&S.byId[h.item_id]?' — <a data-act="item" data-id="'+esc(h.item_id)+'" style="cursor:pointer">לפריט</a>':'')+'</li>'}).join('')+'</ul>':'';
+  return '<div class="wrap single"><section>'+
+   '<div class="view-head ed-nav"><div class="actions" style="margin-inline-start:0">'+(newer?'<button class="btn ghost small" data-act="edition" data-id="'+esc(newer.edition_id)+'">→ מהדורה חדשה יותר</button>':'')+(older?'<button class="btn ghost small" data-act="edition" data-id="'+esc(older.edition_id)+'">מהדורה קודמת ←</button>':'')+'</div><div class="actions"><button class="btn ghost small" data-act="print">'+ICON.print+' הדפסה</button></div></div>'+
+   '<div class="ed-head"><small>המחלקה למשפט בינלאומי · צוות משפט כלכלי בינלאומי</small><h2>'+esc(ed.title||heDate(ed.edition_date,true))+'</h2><div class="w">מכסה את '+esc(ed.window||'')+'</div>'+(ed.note?'<div class="w">'+esc(ed.note)+'</div>':'')+'</div>'+
+   '<div class="ed-bars">'+AREAS.map(function(a){return '<div style="border-color:'+AREA_COLOR[a]+'">'+AREA_NAME[a]+' <b style="color:'+AREA_COLOR[a]+'">'+(c[a]||0)+'</b></div>'}).join('')+'</div>'+
+   '<div class="ed-body"><div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px">עיקרי הדברים</div><ul class="glance">'+(ed.glance||[]).map(function(g){return '<li><i style="background:'+(AREA_COLOR[g.area]||'#5A6878')+'"></i><span>'+esc(g.text)+'</span></li>'}).join('')+'</ul></div>'+
+   secs+hoHTML+fhHTML+'</section></div>';
+}
+
+/* ---------------- topics */
+function viewTopics(){
+  var ts=terms(S.tQ);
+  var list=Object.keys(S.threads).map(function(k){return S.threads[k]}).filter(function(t){
+    if(S.tArea&&t.area!==S.tArea)return false;
+    for(var i=0;i<ts.length;i++)if(t._s.indexOf(ts[i])<0)return false;return true});
+  var sorter={recent:function(a,b){return a.last<b.last?1:a.last>b.last?-1:b.items.length-a.items.length},count:function(a,b){return b.items.length-a.items.length||(a.last<b.last?1:-1)},abc:function(a,b){return a.title.localeCompare(b.title,'he')}}[S.tSort];
+  list.sort(sorter);
+  var multi=list.filter(function(t){return t.items.length>1});
+  var single=list.filter(function(t){return t.items.length===1});
+  function tcard(t){var last=t.items[t.items.length-1];return '<div class="tcard" style="border-top-color:'+AREA_COLOR[t.area]+'" data-act="topic" data-id="'+esc(t.slug)+'" role="link" tabindex="0"><div class="meta"><span class="area-chip a-'+t.area+'">'+AREA_NAME[t.area]+'</span>'+(S.followed[t.slug]?'<span class="status st-follow">במעקב</span>':'')+'</div><h3>'+hl(t.title,ts)+'</h3><div class="m">'+t.items.length+' פריטים · '+(t.first===t.last?esc(heDate(t.last)):esc(heShort(t.first))+' – '+esc(heDate(t.last)))+'</div><div class="last">'+esc(last.headline)+'</div></div>'}
+  var tools='<div class="topic-tools"><input class="input" id="tq" type="search" placeholder="סינון נושאים…" value="'+esc(S.tQ)+'" aria-label="סינון נושאים">'+
+   '<div class="seg">'+[['','הכל']].concat(AREAS.map(function(a){return [a,AREA_NAME[a]]})).map(function(x){return '<button class="'+(S.tArea===x[0]?'on':'')+'" data-act="tarea" data-id="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>'+
+   '<label class="sr" for="tsort">מיון</label><select id="tsort" class="input" style="width:auto" data-act="tsort"><option value="recent"'+(S.tSort==='recent'?' selected':'')+'>פעילות אחרונה</option><option value="count"'+(S.tSort==='count'?' selected':'')+'>מספר פריטים</option><option value="abc"'+(S.tSort==='abc'?' selected':'')+'>א–ב</option></select></div>';
+  return '<div class="wrap single"><section><div class="view-head"><div><h2>נושאים</h2><div class="sub">כל נושא מרכז את ההתפתחויות בעניין אחד לאורך זמן — תיק, משא ומתן, אמצעי או רגולציה.</div></div></div>'+tools+
+   (multi.length?'<div class="section-h">נושאים מתמשכים <span class="n">'+multi.length+'</span></div><div class="grid">'+multi.map(tcard).join('')+'</div>':'')+
+   (single.length?'<div class="section-h">פריטים בודדים <span class="n">'+single.length+'</span></div><div class="grid">'+single.map(tcard).join('')+'</div>':'')+
+   (list.length?'':'<div class="empty">לא נמצאו נושאים.</div>')+'</section></div>';
+}
+function viewTopic(slug){
+  var t=S.threads[slug];if(!t)return '<div class="wrap single"><div class="empty">הנושא לא נמצא.</div></div>';
+  var items=t.items.slice();if(S.tlOrder==='desc')items.reverse();
+  var fol=S.followed[slug];
+  var tc=(S.fbByThread[slug]||[]).filter(function(f){return f.type==='comment'&&!f.item_id});
+  var reqs=(S.fbByThread[slug]||[]).filter(function(f){return f.type!=='comment'});
+  return '<div class="wrap single"><section>'+
+   '<div class="view-head"><div><div class="meta" style="margin-bottom:4px"><span class="area-chip a-'+t.area+'">'+AREA_NAME[t.area]+'</span>'+(fol?'<span class="status st-follow">במעקב — ביקשו '+esc(fol.author)+' ב-'+esc(heShort(String(fol.created_at).substr(0,10)))+'</span>':'')+'</div><h2>'+esc(t.title)+'</h2><div class="sub">'+t.items.length+' פריטים · '+(t.first===t.last?esc(heDate(t.last)):'מ-'+esc(heDate(t.first))+' עד '+esc(heDate(t.last)))+'</div></div>'+
+   '<div class="actions">'+(fol?'<button class="btn ghost small" data-act="unfollow" data-id="'+esc(fol.id)+'">הפסקת המעקב</button>':'<button class="btn small" data-act="followtopic" data-id="'+esc(slug)+'">'+ICON.eye+' לבקש להמשיך לעקוב</button>')+
+   '<button class="btn ghost small" data-act="tlorder">'+(S.tlOrder==='asc'?'מהחדש לישן':'מהישן לחדש')+'</button></div></div>'+
+   (reqs.length?'<div class="help">'+reqs.map(function(f){return esc(TYPE_NAME[f.type])+' של '+esc(f.author)+' ('+esc(relTime(f.created_at))+') '+statusChip(f)}).join('<br>')+'</div>':'')+
+   '<div class="timeline t-a-'+t.area+'">'+items.map(function(it){return '<div class="tl-item"><div class="tl-date">'+esc(heDate(it._ed.edition_date))+' · '+(it.update_of?'עדכון':it.correction_of?'תיקון':it.request?'הרחבה':'דיווח')+'</div>'+card(it,{inTopic:true})+'</div>'}).join('')+'</div>'+
+   '<div class="section-h">הערות על הנושא <span class="n">'+tc.length+'</span></div>'+
+   '<div class="req">'+tc.map(cmtHTML).join('')+'<div class="cmt-form"><textarea id="ta-topic" placeholder="הערה על הנושא כולו…"></textarea><button class="btn small" data-act="sendtopiccmt" data-id="'+esc(slug)+'">שליחה</button></div></div>'+
+  '</section></div>';
+}
+
+/* ---------------- requests */
+function viewRequests(){
+  var rows=S.feedback.slice().sort(function(a,b){return a.created_at<b.created_at?1:-1});
+  var follows=rows.filter(function(f){return f.type==='follow'&&f.status==='open'});
+  var pending=rows.filter(function(f){return f.type!=='comment'&&f.type!=='follow'&&f.status==='open'&&!S.handled[f.id]});
+  var done=rows.filter(function(f){return f.type!=='comment'&&f.type!=='follow'&&(S.handled[f.id]||f.status==='closed')}).slice(0,30);
+  var stopped=rows.filter(function(f){return f.type==='follow'&&f.status==='closed'}).slice(0,15);
+  var recentC=rows.filter(function(f){return f.type==='comment'}).slice(0,25);
+  function target(f){
+    var it=f.item_id&&S.byId[f.item_id];var t=f.thread&&S.threads[f.thread];
+    if(f.type==='follow'&&t)return '<a data-act="topic" data-id="'+esc(f.thread)+'">'+esc(t.title)+'</a>';
+    if(it)return '<a data-act="item" data-id="'+esc(it.id)+'">'+esc(it.headline)+'</a>';
+    if(t)return '<a data-act="topic" data-id="'+esc(f.thread)+'">'+esc(t.title)+'</a>';
+    return esc(f.type==='request'?'בקשה כללית':'');
+  }
+  function handledHTML(f){var h=S.handled[f.id];if(!h)return '';return '<div class="handled">'+h.map(function(x){return '<div>'+esc(heDate(x.edition.substr(0,10)))+': '+esc(x.note)+(x.item_id&&S.byId[x.item_id]?' — <a data-act="item" data-id="'+esc(x.item_id)+'">לפריט</a>':'')+'</div>'}).join('')+'</div>'}
+  function lastInTopic(f){var t=f.thread&&S.threads[f.thread];if(!t)return '';var l=t.items[t.items.length-1];return '<div class="handled">עדכון אחרון בנושא: '+esc(heDate(l._ed.edition_date))+' — <a data-act="item" data-id="'+esc(l.id)+'">'+esc(l.headline)+'</a></div>'}
+  function req(f,extra){return '<div class="req"><div class="top-line"><span><b>'+esc(f.author)+'</b> · '+esc(TYPE_NAME[f.type])+' · '+esc(relTime(f.created_at))+'</span>'+statusChip(f)+'</div><div class="ttl">'+target(f)+'</div>'+(f.text?'<div class="txt">'+esc(f.text)+'</div>':'')+(extra||'')+'</div>'}
+  return '<div class="wrap single"><section>'+
+   '<div class="view-head"><div><h2>מעקב ובקשות</h2><div class="sub">מה הצוות ביקש מהסקירה, ומה כבר טופל.</div></div><div class="actions"><button class="btn small" data-act="newreq">'+ICON.plus+' בקשה חדשה</button></div></div>'+
+   '<div class="help">בקשות נקראות כל בוקר בהכנת הסקירה. <b>מעקב</b> נשאר פעיל עד שמפסיקים אותו; <b>הרחבה</b> ו<b>אי-דיוק</b> מטופלים בסקירה הבאה, והתשובה מופיעה כאן עם קישור לפריט.</div>'+
+   '<div class="section-h">נושאים במעקב <span class="n">'+follows.length+'</span></div>'+
+   (follows.length?follows.map(function(f){return req(f,lastInTopic(f)+handledHTML(f)+'<div class="row-actions"><button class="btn ghost small" data-act="unfollow" data-id="'+esc(f.id)+'">הפסקת המעקב</button></div>')}).join(''):'<div class="empty">אין נושאים במעקב. אפשר ללחוץ "המשך מעקב" על כל פריט.</div>')+
+   '<div class="section-h">בקשות שממתינות לסקירה הבאה <span class="n">'+pending.length+'</span></div>'+
+   (pending.length?pending.map(function(f){return req(f,'<div class="row-actions"><button class="btn ghost small" data-act="closereq" data-id="'+esc(f.id)+'">ביטול הבקשה</button></div>')}).join(''):'<div class="empty">אין בקשות פתוחות.</div>')+
+   (done.length?'<div class="section-h">טופלו לאחרונה <span class="n">'+done.length+'</span></div>'+done.map(function(f){return req(f,handledHTML(f))}).join(''):'')+
+   (recentC.length?'<div class="section-h">הערות אחרונות של הצוות</div>'+recentC.map(function(f){var it=f.item_id&&S.byId[f.item_id];var t=f.thread&&S.threads[f.thread];return '<div class="req"><div class="top-line"><b>'+esc(f.author)+'</b> · '+esc(relTime(f.created_at))+'</div><div class="ttl">'+(it?'<a data-act="item" data-id="'+esc(it.id)+'" data-open="1">'+esc(it.headline)+'</a>':t?'<a data-act="topic" data-id="'+esc(f.thread)+'">'+esc(t.title)+'</a>':'')+'</div><div class="txt">'+esc(f.text)+'</div></div>'}).join(''):'')+
+   (stopped.length?'<div class="section-h">מעקבים שהופסקו</div>'+stopped.map(function(f){return req(f,'<div class="row-actions"><button class="btn ghost small" data-act="reopen" data-id="'+esc(f.id)+'">חידוש המעקב</button></div>')}).join(''):'')+
+  '</section></div>';
+}
+
+/* ---------------- actions */
+function needName(then){
+  if(S.user){then();return}
+  askName(then);
+}
+function askName(then){
+  var team=(S.data&&S.data.team)||[];
+  modal('<h3>מה שמך?</h3><div class="ctx">השם יופיע ליד הערות ובקשות, כדי שהצוות יידע ממי הן. נשמר רק במחשב הזה.</div><div class="names">'+team.map(function(n){return '<button data-name="'+esc(n)+'">'+esc(n)+'</button>'}).join('')+'</div><label class="field"><span>או שם אחר</span><input class="input" id="otherName" maxlength="40" value="'+esc(team.indexOf(S.user)<0?S.user:'')+'"></label><div class="row"><button class="btn primary" id="saveName">שמירה</button><button class="btn ghost" id="cancelName">ביטול</button></div>',function(o){
+    function set(n){n=String(n||'').trim();if(!n)return;S.user=n;lsSet('iel_user',n);closeModal();var b=$('[data-act="name"]');if(b)b.textContent=n;if(then)then()}
+    $all('[data-name]',o).forEach(function(b){b.onclick=function(){set(b.getAttribute('data-name'))}});
+    $('#saveName',o).onclick=function(){set($('#otherName',o).value)};
+    $('#cancelName',o).onclick=closeModal;
+  });
+}
+function feedbackModal(kind,it,slug){
+  var t=slug?S.threads[slug]:(it?S.threads[it._slug]:null);
+  var cfg={
+    follow:{title:'לבקש להמשיך לעקוב',ctx:'הנושא: '+(t?t.title:''),lead:'הסקירה תדווח על כל התפתחות חדשה בנושא עד שתפסיקו את המעקב. אפשר להוסיף מה חשוב לכם במיוחד (לא חובה).',ph:'למשל: חשוב לנו בעיקר שלב האכיפה בארה״ב',req:false,btn:'להתחיל מעקב'},
+    elaborate:{title:'בקשת הרחבה',ctx:it?it.headline:'',lead:'הסקירה הבאה תכלול פריט "הרחבה" שעונה על הבקשה.',ph:'מה תרצו לדעת? למשל: מה בדיוק נקבע לגבי סמכות, ומה השלב הבא',req:false,btn:'שליחת הבקשה'},
+    inaccuracy:{title:'דיווח על אי-דיוק',ctx:it?it.headline:'',lead:'המקורות של הפריט ייבדקו מחדש בסקירה הבאה. אם נפלה טעות יפורסם תיקון.',ph:'מה לא מדויק? למשל: התאריך, הסכום, שם הצד, או שהקישור לא מוביל למסמך',req:true,btn:'שליחת הדיווח'},
+    request:{title:'בקשה חדשה',ctx:'',lead:'למשל: נושא חדש שתרצו שהסקירה תעקוב אחריו, או שאלה שתרצו שתיבדק.',ph:'תארו את הבקשה',req:true,btn:'שליחה'}
+  }[kind];
+  var areaSel=kind==='request'?'<label class="field"><span>תחום (לא חובה)</span><select class="input" id="fbArea"><option value="">—</option>'+AREAS.map(function(a){return '<option value="'+a+'">'+AREA_NAME[a]+'</option>'}).join('')+'</select></label>':'';
+  modal('<h3>'+cfg.title+'</h3>'+(cfg.ctx?'<div class="ctx">'+esc(cfg.ctx)+'</div>':'')+'<p style="margin:0 0 10px;font-size:15px">'+cfg.lead+'</p>'+areaSel+'<textarea id="fbText" placeholder="'+esc(cfg.ph)+'" maxlength="4000"></textarea><div class="row"><button class="btn primary" id="fbSend">'+cfg.btn+'</button><button class="btn ghost" id="fbCancel">ביטול</button></div><div class="err" id="fbErr"></div>',function(o){
+    $('#fbCancel',o).onclick=closeModal;
+    $('#fbSend',o).onclick=function(){
+      var text=$('#fbText',o).value.trim();
+      if(cfg.req&&!text){$('#fbErr',o).textContent='נא לכתוב כמה מילים.';return}
+      if(kind==='elaborate'&&!text)text='בקשה להרחבה על הפריט';
+      var area=kind==='request'&&$('#fbArea',o).value;
+      if(area)text='['+AREA_NAME[area]+'] '+text;
+      var btn=this;btn.disabled=true;
+      addFb({type:kind,text:text,item_id:it?it.id:'',thread:slug||(it?it.thread||'':''),edition_date:it?it._ed.edition_date:''}).then(function(ok){if(ok){closeModal();toast({follow:'הנושא נוסף למעקב.',elaborate:'הבקשה נשמרה ותטופל בסקירה הבאה.',inaccuracy:'הדיווח נשמר ויבדק בסקירה הבאה. תודה.',request:'הבקשה נשמרה.'}[kind])}else btn.disabled=false});
+    };
+  });
+}
+function addFb(fb){
+  fb.author=S.user;
+  return authed({action:'addFeedback',feedback:fb}).then(function(r){
+    if(!r.ok){toast('השמירה נכשלה. נסו שוב.');return false}
+    S.feedback.push(r.row);indexFeedback(S.feedback);renderTabs();rerenderKeepScroll();return true;
+  }).catch(function(e){if(e.message!=='auth')toast('אין חיבור לשרת. ההערה לא נשמרה.');return false});
+}
+function setStatus(id,status){
+  return authed({action:'setStatus',id:id,status:status,by:S.user}).then(function(r){
+    if(!r.ok){toast('הפעולה נכשלה.');return}
+    var f=S.fbById[id];if(f){f.status=status;f.status_by=S.user;f.status_at=new Date().toISOString()}
+    indexFeedback(S.feedback.filter(function(x){return x.status!=='deleted'}));renderTabs();rerenderKeepScroll();
+  }).catch(function(e){if(e.message!=='auth')toast('אין חיבור לשרת.')});
+}
+function rerenderKeepScroll(){var y=window.scrollY;renderView();window.scrollTo(0,y)}
+function copyText(text){
+  function fallback(){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.remove();return ok}
+  if(navigator.clipboard&&navigator.clipboard.writeText){return navigator.clipboard.writeText(text).then(function(){return true},function(){return fallback()})}
+  return Promise.resolve(fallback());
+}
+function itemText(it){
+  return [it.headline,'('+AREA_NAME[it.area]+' · '+(it.tag||'')+' · '+(it.date_text||'')+')','',it.summary,'','רלוונטיות עבורנו: '+it.why,'',((it.sources||[]).length>1?'מקורות:':'מקור:')].concat((it.sources||[]).map(function(s){return s.label+': '+s.url})).concat(['','מתוך סקירת משפט כלכלי בינלאומי, '+(it._ed.title||heDate(it._ed.edition_date,true))]).join('\n');
+}
+
+function onClick(e){
+  var el=e.target.closest('[data-act]');if(!el||el.tagName==='INPUT'||el.tagName==='SELECT')return;
+  var act=el.getAttribute('data-act'),id=el.getAttribute('data-id');
+  var it=id&&S.byId[id];
+  switch(act){
+    case 'home':S.q='';$('#q').value='';go({p:'feed'});break;
+    case 'tab':go({p:id});break;
+    case 'clearq':$('#q').value='';setQuery('');break;
+    case 'refresh':toast('מרענן…');load().then(function(){renderTabs();renderView();toast('הארכיון עודכן.')}).catch(function(){toast('הרענון נכשל.')});break;
+    case 'logout':logout(false);break;
+    case 'name':askName(function(){renderView()});break;
+    case 'item':if(it){if(el.getAttribute('data-open'))S.openComments[it.id]=true;go({p:'topic',id:it._slug,focus:it.id})}break;
+    case 'topic':go({p:'topic',id:id});break;
+    case 'edition':go({p:'edition',id:id});break;
+    case 'area':S.f.areas[id]=!S.f.areas[id];S.shown=PAGE;renderView();break;
+    case 'period':S.f.period=id;S.shown=PAGE;renderView();break;
+    case 'tag':S.f.tag=S.f.tag===id?'':id;S.shown=PAGE;renderView();break;
+    case 'unfilter':
+      if(id==='all'){S.f={areas:{},period:'all',key:false,updates:false,requests:false,comments:false,isnew:false,followed:false,tag:''};S.q='';$('#q').value='';setQuery('');return}
+      if(id==='q'){$('#q').value='';setQuery('');return}
+      if(id.indexOf('area:')===0)S.f.areas[id.slice(5)]=false;else if(id==='period')S.f.period='all';else if(id==='tag')S.f.tag='';else S.f[id]=false;
+      S.shown=PAGE;renderView();break;
+    case 'shownew':S.f.isnew=true;renderView();break;
+    case 'more':S.shown+=PAGE;rerenderKeepScroll();break;
+    case 'filters':var sd=$('#side');if(sd)sd.classList.toggle('open');break;
+    case 'comments':S.openComments[id]=!S.openComments[id];rerenderKeepScroll();if(S.openComments[id]){var ta=document.getElementById('ta-'+id);if(ta)ta.focus()}break;
+    case 'sendcmt':
+      var ta2=document.getElementById('ta-'+id);var txt=ta2&&ta2.value.trim();if(!txt)return;
+      needName(function(){el.disabled=true;addFb({type:'comment',text:txt,item_id:id,thread:it?it.thread||'':'',edition_date:it?it._ed.edition_date:''}).then(function(ok){if(ok)toast('ההערה נשמרה.')})});break;
+    case 'sendtopiccmt':
+      var ta3=document.getElementById('ta-topic');var tt=ta3&&ta3.value.trim();if(!tt)return;
+      needName(function(){addFb({type:'comment',text:tt,thread:id}).then(function(ok){if(ok)toast('ההערה נשמרה.')})});break;
+    case 'delcmt':confirmModal('למחוק את ההערה?','מחיקה',function(){setStatus(id,'deleted').then(function(){toast('ההערה נמחקה.')})});break;
+    case 'follow':if(!it)return;if(S.followed[it._slug]){go({p:'requests'});return}needName(function(){feedbackModal('follow',it,it._slug)});break;
+    case 'followtopic':needName(function(){feedbackModal('follow',null,id)});break;
+    case 'unfollow':setStatus(id,'closed').then(function(){toast('המעקב הופסק.')});break;
+    case 'reopen':setStatus(id,'open').then(function(){toast('המעקב חודש.')});break;
+    case 'closereq':setStatus(id,'closed').then(function(){toast('הבקשה בוטלה.')});break;
+    case 'elaborate':if(it)needName(function(){feedbackModal('elaborate',it)});break;
+    case 'inaccuracy':if(it)needName(function(){feedbackModal('inaccuracy',it)});break;
+    case 'newreq':needName(function(){feedbackModal('request',null,'')});break;
+    case 'copy':if(it)copyText(itemText(it)).then(function(ok){toast(ok?'הפריט הועתק, כולל המקורות.':'ההעתקה לא הצליחה.')});break;
+    case 'link':if(it){var u=itemLink(it.id);copyText(u).then(function(ok){toast(ok?'הקישור לפריט הועתק.':'ההעתקה לא הצליחה.')})}break;
+    case 'tarea':S.tArea=id;renderView();break;
+    case 'tlorder':S.tlOrder=S.tlOrder==='asc'?'desc':'asc';renderView();break;
+    case 'print':window.print();break;
+    case 'tour':startTour();break;
+  }
+}
+function confirmModal(q,yes,fn){modal('<h3>'+esc(q)+'</h3><div class="row"><button class="btn primary" id="cmYes">'+esc(yes)+'</button><button class="btn ghost" id="cmNo">ביטול</button></div>',function(o){$('#cmYes',o).onclick=function(){closeModal();fn()};$('#cmNo',o).onclick=closeModal})}
+function onChange(e){
+  var el=e.target;var act=el.getAttribute('data-act');
+  if(act==='flag'){S.f[el.getAttribute('data-id')]=el.checked;S.shown=PAGE;renderView()}
+  if(act==='tsort'){S.tSort=el.value;renderView()}
+}
+document.addEventListener('input',function(e){if(e.target&&e.target.id==='tq'){S.tQ=e.target.value;var pos=e.target.selectionStart;renderView();var n=$('#tq');if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}}});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Enter'&&e.target&&(e.target.classList.contains('tcard')||e.target.classList.contains('ed-row'))){e.target.click()}
+  if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)&&e.target&&e.target.tagName==='TEXTAREA'){var b=e.target.parentNode.querySelector('[data-act^="send"]');if(b)b.click()}
+});
+
+/* ---------------- boot */
+/* ---------------- guided tour ("? הסבר") */
+var TOUR=[
+ {t:'ברוכים הבאים לארכיון',x:'כאן נמצאות כל הסקירות היומיות מאז 12 באוקטובר, וכל סקירה חדשה מתווספת אוטומטית. בכמה צעדים קצרים נראה איך מוצאים מידע, עוקבים אחרי נושאים ומבקשים דברים מהסקירה.'},
+ {s:'#q',t:'חיפוש בכל הסקירות',x:'אפשר לחפש שם של תיק, צד, מדינה, גוף או מונח, בעברית או באנגלית (למשל NextEra, ICSID, סנקציות). החיפוש עובר על הכותרות, התקצירים, המקורות וגם על הערות הצוות. מקש / מעביר לכאן מכל מקום.'},
+ {s:'#tabs',t:'ארבעה מסכים',x:'"כל העדכונים" מציג את כל הפריטים מהחדש לישן. "מהדורות" מציג כל סקירה כפי שנשלחה במייל. "נושאים" מרכז כל עניין מתמשך (תיק, משא ומתן, רגולציה) בציר זמן אחד. "מעקב ובקשות" מראה מה הצוות ביקש ומה כבר טופל.'},
+ {s:'#side .panel',alt:'[data-act="filters"]',t:'סינון',x:'בצד אפשר לצמצם לפי תחום (סחר, השקעות, טכנולוגיות, ESG), לפי תקופה, ולהציג רק פריטים מרכזיים, רק עדכונים, רק פריטים עם הערות או רק נושאים שבמעקב.'},
+ {s:'#main .card',t:'כרטיס של פריט',x:'כל פריט מציג את מה שקרה, למה זה רלוונטי לנו, וקישורים למקורות. סימן ✓ ליד מקור מסמן מקור רשמי, ומנעול מסמן מקור למנויים (GAR, IAReporter).'},
+ {s:'#main .card .topic-chip',t:'כל ההתפתחויות בנושא',x:'לחיצה על "נושא" פותחת ציר זמן של כל הדיווחים באותו עניין, מהראשון ועד האחרון. כך רואים איך תיק או הליך התפתחו לאורך זמן.'},
+ {s:'#main .card [data-act="comments"]',t:'הערות לצוות',x:'אפשר להשאיר הערה על כל פריט. ההערה גלויה לכל הצוות, ומופיעה גם בחיפוש.'},
+ {s:'#main .card [data-act="follow"]',t:'המשך מעקב',x:'לחיצה כאן מבקשת מהסקירה לדווח על כל התפתחות חדשה בנושא הזה, עד שתבטלו את המעקב. אפשר להוסיף מה חשוב לכם במיוחד.'},
+ {s:'#main .card [data-act="elaborate"]',t:'בקשת הרחבה',x:'רוצים לדעת יותר? הסקירה הבאה תכלול פריט "הרחבה" שעונה על הבקשה, עם המקורות.'},
+ {s:'#main .card [data-act="inaccuracy"]',t:'דיווח על אי-דיוק',x:'אם משהו לא תואם את המקור, כתבו מה. הסקירה הבאה תבדוק את המקורות מחדש, ואם נפלה טעות יפורסם "תיקון".'},
+ {s:'#main .card [data-act="copy"]',t:'העתקה',x:'מעתיק את הפריט עם כל הקישורים, כדי להדביק במייל או במזכר. הכפתור שלידו מעתיק קישור ישיר לפריט באתר.'},
+ {s:'[data-act="tab"][data-id="requests"]',t:'מעקב ובקשות',x:'כאן רואים את כל הבקשות של הצוות: מה ממתין לסקירה הבאה, מה טופל ובאיזה פריט, ואילו נושאים במעקב. אפשר גם לפתוח בקשה חדשה, למשל נושא חדש שתרצו שהסקירה תעקוב אחריו.'},
+ {s:'[data-act="name"]',t:'השם שלכם',x:'השם מופיע ליד הערות ובקשות, כדי שהצוות יידע ממי הן. אפשר לשנות אותו כאן.'},
+ {s:'[data-act="tour"]',t:'זהו!',x:'אפשר לפתוח את ההסבר הזה שוב בכל רגע בכפתור "? הסבר". הקישור שבמייל היומי נכנס לאתר בלי סיסמה.'}
+];
+var tourI=-1;
+function tourTarget(st){
+  var sels=[st.s,st.alt].filter(Boolean);
+  for(var i=0;i<sels.length;i++){var els=$all(sels[i]);for(var j=0;j<els.length;j++){var r=els[j].getBoundingClientRect();if(r.width>0&&r.height>0)return els[j]}}
+  return null;
+}
+function endTour(){tourI=-1;['.tour-hl','.tour-bubble','.tour-catch'].forEach(function(c){var e=$(c);if(e)e.remove()});window.removeEventListener('resize',placeTour);window.removeEventListener('scroll',placeTour,true);lsSet('iel_tour_done','1')}
+function startTour(){
+  closeModal();
+  if(S.route.p!=='feed'||S.q){S.q='';var q=$('#q');if(q)q.value='';go({p:'feed'})}
+  endTour();tourI=0;
+  var c=document.createElement('div');c.className='tour-catch';c.addEventListener('click',function(){showTour(tourI+1)});document.body.appendChild(c);
+  var h=document.createElement('div');h.className='tour-hl';document.body.appendChild(h);
+  var b=document.createElement('div');b.className='tour-bubble';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');document.body.appendChild(b);
+  b.addEventListener('click',function(e){var a=e.target.getAttribute('data-tour');if(a==='next')showTour(tourI+1);if(a==='prev')showTour(tourI-1);if(a==='end')endTour()});
+  window.addEventListener('resize',placeTour);window.addEventListener('scroll',placeTour,true);
+  setTimeout(function(){showTour(0)},80);
+}
+function showTour(i){
+  if(i<0)i=0;if(i>=TOUR.length){endTour();return}
+  tourI=i;var st=TOUR[i],b=$('.tour-bubble');if(!b)return;
+  var last=i===TOUR.length-1;
+  b.innerHTML='<h4>'+esc(st.t)+'</h4><p>'+esc(st.x)+'</p><div class="tour-row"><span class="cnt">'+(i+1)+' מתוך '+TOUR.length+'</span>'+
+    (i>0?'<button class="btn ghost small" data-tour="prev">הקודם</button>':'')+
+    (last?'<button class="btn small" data-tour="end">סיום</button>':'<button class="btn small" data-tour="next">הבא</button><button class="btn ghost small" data-tour="end">דילוג</button>')+'</div>';
+  var el=st.s?tourTarget(st):null;
+  if(el){var r=el.getBoundingClientRect();if(r.top<70||r.bottom>window.innerHeight-40)el.scrollIntoView({block:'center'})}
+  setTimeout(placeTour,40);
+  var f=b.querySelector('[data-tour="next"],[data-tour="end"]');if(f)f.focus();
+}
+function placeTour(){
+  if(tourI<0)return;var st=TOUR[tourI],h=$('.tour-hl'),b=$('.tour-bubble');if(!h||!b)return;
+  var el=st.s?tourTarget(st):null,vw=window.innerWidth,vh=window.innerHeight,bw=b.offsetWidth,bh=b.offsetHeight;
+  if(!el){h.style.cssText='top:50%;left:50%;width:0;height:0';b.className='tour-bubble center';b.style.left=Math.max(16,(vw-bw)/2)+'px';b.style.top=Math.max(16,(vh-bh)/2)+'px';return}
+  var r=el.getBoundingClientRect(),pad=6;
+  h.style.cssText='top:'+(r.top-pad)+'px;left:'+(r.left-pad)+'px;width:'+(r.width+pad*2)+'px;height:'+(r.height+pad*2)+'px';
+  var below=r.bottom+14+bh<vh||r.top-14-bh<0;
+  var top=below?r.bottom+14:r.top-14-bh;top=Math.max(12,Math.min(top,vh-bh-12));
+  var left=Math.max(16,Math.min(r.left+r.width/2-bw/2,vw-bw-16));
+  b.className='tour-bubble '+(below?'below':'above');b.style.top=top+'px';b.style.left=left+'px';
+  b.style.setProperty('--ax',Math.max(18,Math.min(r.left+r.width/2-left,bw-18))+'px');
+}
+document.addEventListener('keydown',function(e){if(tourI<0)return;if(e.key==='Escape')endTour();if(e.key==='ArrowLeft')showTour(tourI+1);if(e.key==='ArrowRight')showTour(tourI-1)});
+
+/* ---------------- boot (the link in the daily email carries ?k=… and needs no password) */
+function readParams(cb){
+  try{if(window.google&&google.script&&google.script.url){google.script.url.getLocation(function(l){cb((l&&l.parameter)||{})});return}}catch(e){}
+  var o={};try{new URLSearchParams(location.search).forEach(function(v,k){o[k]=v});new URLSearchParams(location.hash.replace(/^#/,'')).forEach(function(v,k){if(k==='k')o[k]=v})}catch(e){}cb(o);
+}
+function dropKeyFromUrl(){
+  try{if(hasGsHistory())google.script.history.replace(null,{},'');else history.replaceState(null,'',location.pathname+(/(^#|&)k=/.test(location.hash)?'':location.hash))}catch(e){}
+}
+S.token=lsGet('iel_token')||ssGet('iel_token');
+if(S.token){var exp=Number(String(S.token).split('.')[0]);if(!exp||exp<Date.now()){lsDel('iel_token');ssDel('iel_token');S.token=null}}
+readParams(function(p){
+  if(p.k&&!S.token){
+    document.getElementById('app').innerHTML='<div class="loading"><div class="spin"></div><div>נכנסים לארכיון…</div></div>';
+    call({action:'login',key:String(p.k)}).then(function(r){
+      if(r.ok){S.token=r.token;lsSet('iel_token',r.token);dropKeyFromUrl();start()}
+      else renderLogin(r.error==='locked'?'יותר מדי ניסיונות שגויים. אפשר לנסות שוב בעוד '+r.minutes+' דקות.':'הקישור מהמייל אינו בתוקף עוד. אפשר להיכנס עם סיסמת הצוות.');
+    }).catch(function(){renderLogin('אין חיבור לשרת. בדקו את החיבור לאינטרנט ונסו שוב.')});
+  }else{if(p.k)dropKeyFromUrl();if(S.token)start();else renderLogin()}
+});
+})();
+</script>
+</body>
+</html>
